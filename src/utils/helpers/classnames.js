@@ -1,7 +1,7 @@
-export default classNames = (...classNames) => {
+const classNames = (...classnames) => {
     const result = []
 
-    classNames.forEach(className => {
+    classnames.forEach(className => {
         if (!className) return
         
         switch (typeof className) {
@@ -16,9 +16,11 @@ export default classNames = (...classNames) => {
                 })
                 break
             default: 
-                result.push(`${item}`)
+                result.push(`${className}`)
         }
     })
 
     return result.join(' ')
 }
+
+export default classNames

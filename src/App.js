@@ -1,6 +1,6 @@
 import { BrowserRouter } from 'react-router-dom'
 import { useRoutes } from './routes'
-import { MainMenu } from './components'
+import { MainMenu } from './components/layouts'
 
 function App() {
   const routes = useRoutes()

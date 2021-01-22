@@ -2,10 +2,15 @@
     position: relative;
     width: 100%;
     padding: .5em 1.5em;
-    background: var(--menu-color);
-    display: flex;
-    align-items: center;
+    background: dodgerblue;
+    border-bottom: 3px solid darken(dodgerblue, 5);
+    box-shadow: 0 6px 22px -6px rgba(30, 144, 255, 0.55);
 
+    &__link {
+        display: flex;
+        text-decoration: none;
+        align-items: center;
+    }
 
     &__icon {
         width: 45px;
@@ -18,7 +23,7 @@
             svg {
                 width: 100%;
                 height: 100%;
-                fill:var(--first-text);
+                fill:white;
             }
         }
     }
@@ -27,6 +32,6 @@
         padding: 0;
         margin: .5em;
         font-family: 'Rubik', sans-serif;
-        color:var(--first-text);
+        color:white;
     }
 }

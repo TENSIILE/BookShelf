@@ -1,0 +1,45 @@
+.list-books {
+    position: relative;
+    
+    $self: list-books;
+
+    &__item {
+        background: white;
+        display: flex;
+        padding: 1em;
+        border-radius: 4px;
+        border: 1px solid #e8e8e8;
+
+        .#{$self}__img {
+            width: 150px;
+            border-radius: 4px;
+            object-fit: cover;
+        }
+
+        .#{$self}__texts {
+            position: relative;
+            width: 100%;
+            margin: 0 1em;
+
+            .#{$self}__title {
+                margin-top: 0;
+                margin-bottom: 5px;
+            }
+
+            .#{$self}__author {
+                margin: 0;
+                margin-bottom: 1em;
+            }
+        }
+
+        .#{$self}__control {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        & + & {
+            margin-top: 1em;
+        }
+    }
+}
