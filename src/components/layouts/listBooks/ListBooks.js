@@ -1,26 +1,51 @@
+import { useContext } from 'react'
+import { ReactSVG } from 'react-svg'
+import { LogicBookShelf } from '../../../contexts/logicBookShelf'
 import { Button, Badge } from '../../'
+
+import { empty_box } from '../../../static/icons'
 import './listBooks.scss'
 
 export const ListBooks = () => {
+    const logic = useContext(LogicBookShelf)
+
     return (
         <div className="list-books">
-            <div className="list-books__item">
-                <img className="list-books__img" src="http://www.getsready.com/wp-content/uploads/2016/06/an-awesome-scenery-at-boston.jpg" alt=""/>
-                <div className="list-books__texts">
-                    <h2 className='list-books__title'>JavaScript</h2>
-                    <p className='list-books__author'>А.А Пушкин</p>
-                    <Badge className='list-books__date badge--danger'>2016г</Badge>
-                </div>
-                <div className="list-books__control">
-                    <Button.Link 
-                        to='/edit'
-                        className='btn--primary'
-                    >
-                        Редактировать
-                    </Button.Link>
-                    <Button className='btn--danger'>Удалить</Button>
-                </div>
-            </div>
+            {
+                logic.listBooks.length ? logic.listBooks.map(book => (
+                    <div className="list-books__item" key={book.id + Math.random()}>
+                        {book.imageUrl && <img className="list-books__img" src={book.imageUrl} alt=""/>}
+                        
+                        <div className="list-books__texts">
+                            <h2 className='list-books__title'>{book.title}</h2>
+                            <p className='list-books__author'>{book.fullnameAuthor}</p>
+                            <Badge className='list-books__date badge--danger'>{book.yearRelease}</Badge>
+                        </div>
+                        <div className="list-books__control">
+                            <Button
+                                className='btn--primary'
+                                onClick={() => logic.onEditBook(book)}
+                            >
+                                Редактировать
+                            </Button>
+                            <Button 
+                                className='btn--danger'
+                                onClick={() => logic.onRemoveBook(book.id)}
+                            >
+                                Удалить
+                            </Button>
+                        </div>
+                    </div>
+                )) : (
+                    <div className='list-books__empty-data'>
+                        <ReactSVG 
+                            src={empty_box} 
+                            className='list-books__icon-empty'
+                        />
+                        <span className='list-books__text-empty'>Книг пока что нет!</span>
+                    </div>
+                )
+            }
         </div>
     )
 }

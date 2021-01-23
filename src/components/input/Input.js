@@ -8,11 +8,12 @@ export const Input = ({
     placeholder, 
     className,
     readOnly,
-    number = {min: 0, max: null}
+    number = {min: 0, max: null},
+    name
 }) => (
     <input 
         type={type} 
-        defaultValue={state} 
+        value={state} 
         onChange={setState} 
         placeholder={placeholder} 
         className={classnames('input', className)}
@@ -20,5 +21,6 @@ export const Input = ({
         min={number.min}
         max={number.max}
         step={1}
+        name={name}
     />
 )
