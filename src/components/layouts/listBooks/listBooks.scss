@@ -27,6 +27,7 @@
             .#{$self}__title {
                 margin-top: 0;
                 margin-bottom: 5px;
+                overflow-wrap: anywhere;
             }
 
             .#{$self}__author {
@@ -38,7 +39,10 @@
         .#{$self}__control {
             display: flex;
             flex-direction: column;
-            justify-content: space-between;
+            
+            button + button {
+                margin-top: 1em;
+            }
         }
 
         & + & {

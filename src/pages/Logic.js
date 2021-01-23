@@ -46,10 +46,12 @@ export const LogicBook = ({ children }) => {
         if (!inputState.title || !inputState.fullnameAuthor) {
             return alert.show('Вы забыли ввести некоторые данные!', 'danger')
         }
+
+        const uid = ~~Math.random() + Date.now()
         
         listBooksDispatch({
             type: ADDED_BOOK,
-            payload: inputState
+            payload: {...inputState, id: uid}
         })
 
         onCancelAction()
