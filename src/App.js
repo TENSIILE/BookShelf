@@ -1,21 +1,21 @@
 import { BrowserRouter } from 'react-router-dom'
-import { useRoutes } from './routes'
-import { MainMenu } from './components/layouts'
-import { Alert } from './components/alert/Alert'
-import { AlertState } from './contexts/alert/AlertState'
-import { LogicBook } from './pages/Logic'
+import { Alert } from '@/components'
+import { MainMenu } from '@/components/layouts'
+import { AlertState } from '@/contexts'
+import { LogicBook } from '@/pages/Logic'
+import { useRoutes } from '@/routes'
 
 function App() {
   const routes = useRoutes()
-  
+
   return (
     <BrowserRouter>
-      <div className="container">
-        <MainMenu/>
+      <div className='container'>
+        <MainMenu />
         <AlertState>
           <LogicBook>
             <main>
-              <Alert/>
+              <Alert />
               {routes}
             </main>
           </LogicBook>
