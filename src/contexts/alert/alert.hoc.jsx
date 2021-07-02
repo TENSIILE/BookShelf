@@ -1,7 +1,7 @@
 import {useReducer, useCallback} from 'react';
-import {AlertContext} from './alert.context';
-import {AlertReducer} from '../../reducers/alert.reducer';
-import {SHOW_ALERT, HIDE_ALERT} from '../../types/alert.types';
+import {AlertContext} from '@/contexts/alert/alert.context';
+import {AlertReducer} from '@/reducers';
+import {SHOW_ALERT, HIDE_ALERT} from '@/types/alert.types';
 
 export const AlertState = ({children}) => {
   const [state, dispatch] = useReducer(AlertReducer, {

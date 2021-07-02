@@ -4,10 +4,10 @@ import './main-page.scss';
 
 export const MainPage = () => {
   return (
-    <div className="main-page">
+    <div className="main_page">
       <h1>Список всех книг</h1>
       <hr />
-      <Button.Link className="main-page__btn-added btn--primary" to="/add">
+      <Button.Link className="main_page__btn_added btn--primary" to="/add">
         Добавить книгу
       </Button.Link>
       <ListBooks />

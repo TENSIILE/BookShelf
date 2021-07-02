@@ -1,5 +1,5 @@
 import {useContext} from 'react';
-import {LogicBookShelf} from '@/contexts/logic-book-shelf.context';
+import {LogicBookShelf} from '@/contexts/logic/logic.context';
 import {Input, Button} from '@/components';
 import classnames from '@/utils/helpers/classnames.helper';
 import './form.scss';
@@ -9,7 +9,7 @@ export const Form = ({isEdit}) => {
 
   return (
     <div className="form">
-      <div className="form__input">
+      <div className="form__inputs">
         <Input
           placeholder="Введите название книги"
           state={logic.inputState.title}

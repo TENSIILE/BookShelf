@@ -1,6 +1,6 @@
 import {useReducer, useEffect, useContext, useCallback} from 'react';
 import {useHistory} from 'react-router-dom';
-import {LogicBookShelf} from '@/contexts/logic-book-shelf.context';
+import {LogicBookShelf} from '@/contexts/logic/logic.context';
 import {AlertContext} from '@/contexts/alert/alert.context';
 import {InputReducer, BookReducer} from '@/reducers';
 import {
