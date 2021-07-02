@@ -1,5 +1,5 @@
-import classnames from '@/utils/helpers/classnames'
-import './input.scss'
+import classnames from '@/utils/helpers/classnames';
+import './input.scss';
 
 export const Input = ({
   type = 'text',
@@ -8,7 +8,7 @@ export const Input = ({
   placeholder,
   className,
   readOnly,
-  number = { min: 0, max: null },
+  number = {min: 0, max: null},
   name,
 }) => (
   <input
@@ -23,4 +23,4 @@ export const Input = ({
     step={1}
     name={name}
   />
-)
+);

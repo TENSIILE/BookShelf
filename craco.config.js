@@ -1,5 +1,5 @@
-const path = require('path')
-const CracoAlias = require('craco-alias')
+const path = require('path');
+const CracoAlias = require('craco-alias');
 
 module.exports = {
   plugins: [
@@ -14,4 +14,4 @@ module.exports = {
       },
     },
   ],
-}
+};

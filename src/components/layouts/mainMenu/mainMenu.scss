@@ -1,38 +1,38 @@
 .main-menu {
-    position: relative;
-    width: 100%;
-    padding: .5em 1.5em;
-    background: dodgerblue;
-    border-bottom: 3px solid darken(dodgerblue, 5);
-    box-shadow: 0 6px 22px -6px rgba(30, 144, 255, 0.55);
+  position: relative;
+  width: 100%;
+  padding: 0.5em 1.5em;
+  background: dodgerblue;
+  border-bottom: 3px solid darken(dodgerblue, 5);
+  box-shadow: 0 6px 22px -6px rgba(30, 144, 255, 0.55);
 
-    &__link {
-        display: flex;
-        text-decoration: none;
-        align-items: center;
-        width: max-content;
+  &__link {
+    display: flex;
+    text-decoration: none;
+    align-items: center;
+    width: max-content;
+  }
+
+  &__icon {
+    width: 45px;
+    height: 45px;
+
+    div {
+      width: 100%;
+      height: 100%;
+
+      svg {
+        width: 100%;
+        height: 100%;
+        fill: white;
+      }
     }
+  }
 
-    &__icon {
-        width: 45px;
-        height: 45px;
-
-        div {
-            width: 100%;
-            height: 100%;
-
-            svg {
-                width: 100%;
-                height: 100%;
-                fill:white;
-            }
-        }
-    }
-
-    &__title {
-        padding: 0;
-        margin: .5em;
-        font-family: 'Rubik', sans-serif;
-        color:white;
-    }
+  &__title {
+    padding: 0;
+    margin: 0.5em;
+    font-family: 'Rubik', sans-serif;
+    color: white;
+  }
 }

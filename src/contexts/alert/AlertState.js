@@ -1,36 +1,40 @@
-import { useReducer, useCallback } from 'react'
-import { AlertContext } from './AlertContext'
-import { AlertReducer } from '../../reducers/alertReducer'
-import { SHOW_ALERT, HIDE_ALERT } from '../../types/alert.types'
+import {useReducer, useCallback} from 'react';
+import {AlertContext} from './AlertContext';
+import {AlertReducer} from '../../reducers/alertReducer';
+import {SHOW_ALERT, HIDE_ALERT} from '../../types/alert.types';
 
-export const AlertState = ({ children }) => {
-    const [state, dispatch] = useReducer(AlertReducer, {
-        turnOn: false,
-        title: '',
-        type: '',
-    })
+export const AlertState = ({children}) => {
+  const [state, dispatch] = useReducer(AlertReducer, {
+    turnOn: false,
+    title: '',
+    type: '',
+  });
 
-    const hide = useCallback(() => {
-        dispatch({
-            type: HIDE_ALERT
-        })
-    }, [])
+  const hide = useCallback(() => {
+    dispatch({
+      type: HIDE_ALERT,
+    });
+  }, []);
 
-    const show = useCallback((title, type = 'primary') => {
-        dispatch({
-            type: SHOW_ALERT,
-            payload: {
-                title,
-                type,
-            }
-        })
-    }, [])
+  const show = useCallback((title, type = 'primary') => {
+    dispatch({
+      type: SHOW_ALERT,
+      payload: {
+        title,
+        type,
+      },
+    });
+  }, []);
 
-    return (
-        <AlertContext.Provider value={{
-            state, show, hide
-        }}>
-            {children}
-        </AlertContext.Provider>
-    )
-}
+  return (
+    <AlertContext.Provider
+      value={{
+        state,
+        show,
+        hide,
+      }}
+    >
+      {children}
+    </AlertContext.Provider>
+  );
+};

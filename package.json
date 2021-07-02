@@ -40,7 +40,9 @@
       "last 1 safari version"
     ]
   },
+  "prettier": "prettier-airbnb-config",
   "devDependencies": {
-    "craco-alias": "^3.0.1"
+    "craco-alias": "^3.0.1",
+    "prettier-airbnb-config": "^1.0.0"
   }
 }
