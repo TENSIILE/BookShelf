@@ -1,2 +1,2 @@
-export {BookReducer} from './bookReducer';
-export {InputReducer} from './InputReducer';
+export {BookReducer} from './book.reducer';
+export {InputReducer} from './input.reducer';

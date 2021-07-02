@@ -1,4 +1,4 @@
-import {CHANGE_INPUT, CLEAR_INPUT} from '@/types/bookShelf.types';
+import {CHANGE_INPUT, CLEAR_INPUT} from '@/types/book-shelf.types';
 
 export const InputReducer = (state, action) => {
   switch (action.type) {

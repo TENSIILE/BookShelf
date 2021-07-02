@@ -1,7 +1,7 @@
 import {useContext} from 'react';
-import {LogicBookShelf} from '@/contexts/logicBookShelf';
+import {LogicBookShelf} from '@/contexts/logic-book-shelf.context';
 import {Input, Button} from '@/components';
-import classnames from '@/utils/helpers/classnames';
+import classnames from '@/utils/helpers/classnames.helper';
 import './form.scss';
 
 export const Form = ({isEdit}) => {

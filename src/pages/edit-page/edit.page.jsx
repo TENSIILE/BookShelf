@@ -1,5 +1,5 @@
 import {Form} from '@/components/layouts';
-import './editPage.scss';
+import './edit-page.scss';
 
 export const EditPage = () => {
   return (

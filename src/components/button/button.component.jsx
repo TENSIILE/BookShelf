@@ -1,5 +1,5 @@
 import {Link} from 'react-router-dom';
-import classnames from '@/utils/helpers/classnames';
+import classnames from '@/utils/helpers/classnames.helper';
 import './button.scss';
 
 export const Button = ({children, className, onClick}) => (

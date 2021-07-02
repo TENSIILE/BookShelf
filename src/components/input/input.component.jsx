@@ -1,4 +1,4 @@
-import classnames from '@/utils/helpers/classnames';
+import classnames from '@/utils/helpers/classnames.helper';
 import './input.scss';
 
 export const Input = ({

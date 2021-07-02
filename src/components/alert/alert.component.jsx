@@ -1,7 +1,7 @@
 import {useContext} from 'react';
 import {ReactSVG} from 'react-svg';
-import {AlertContext} from '@/contexts/alert/AlertContext';
-import classnames from '@/utils/helpers/classnames';
+import {AlertContext} from '@/contexts/alert/alert.context';
+import classnames from '@/utils/helpers/classnames.helper';
 import {close} from '@/static/icons';
 import './alert.scss';
 

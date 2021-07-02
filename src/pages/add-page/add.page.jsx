@@ -1,5 +1,5 @@
 import {Form} from '@/components/layouts';
-import './addPage.scss';
+import './add-page.scss';
 
 export const AddPage = () => (
   <div className="add-page">

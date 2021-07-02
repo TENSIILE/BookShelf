@@ -1,4 +1,4 @@
-import {ADDED_BOOK, EDIT_BOOK, REMOVE_BOOK} from '../types/bookShelf.types';
+import {ADDED_BOOK, EDIT_BOOK, REMOVE_BOOK} from '../types/book-shelf.types';
 
 export const BookReducer = (state, action) => {
   switch (action.type) {

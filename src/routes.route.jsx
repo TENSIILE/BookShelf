@@ -1,7 +1,7 @@
 import {Switch, Route, Redirect} from 'react-router-dom';
 import {MainPage, EditPage, AddPage} from '@/pages';
 
-export const useRoutes = () => (
+export const Routes = () => (
   <Switch>
     <Route path="/" exact>
       <MainPage />

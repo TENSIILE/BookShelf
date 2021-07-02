@@ -1,7 +1,7 @@
 import {Link} from 'react-router-dom';
 import {ReactSVG} from 'react-svg';
 import {book} from '@/static/icons';
-import './mainMenu.scss';
+import './main-menu.scss';
 
 export const MainMenu = () => (
   <nav className="main-menu">

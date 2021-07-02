@@ -1,9 +1,9 @@
 import {useContext} from 'react';
 import {ReactSVG} from 'react-svg';
-import {LogicBookShelf} from '@/contexts/logicBookShelf';
+import {LogicBookShelf} from '@/contexts/logic-book-shelf.context';
 import {Button, Badge} from '@/components';
 import {empty_box} from '@/static/icons';
-import './listBooks.scss';
+import './list-books.scss';
 
 export const ListBooks = () => {
   const logic = useContext(LogicBookShelf);

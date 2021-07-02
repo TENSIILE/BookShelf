@@ -1,4 +1,4 @@
-import classnames from '@/utils/helpers/classnames';
+import classnames from '@/utils/helpers/classnames.helper';
 import './badge.scss';
 
 export const Badge = ({className, children}) => (

@@ -1,7 +1,7 @@
 import {useReducer, useEffect, useContext, useCallback} from 'react';
 import {useHistory} from 'react-router-dom';
-import {LogicBookShelf} from '@/contexts/logicBookShelf';
-import {AlertContext} from '@/contexts/alert/AlertContext';
+import {LogicBookShelf} from '@/contexts/logic-book-shelf.context';
+import {AlertContext} from '@/contexts/alert/alert.context';
 import {InputReducer, BookReducer} from '@/reducers';
 import {
   CHANGE_INPUT,
@@ -9,7 +9,7 @@ import {
   ADDED_BOOK,
   REMOVE_BOOK,
   EDIT_BOOK,
-} from '@/types/bookShelf.types';
+} from '@/types/book-shelf.types';
 
 export const LogicBook = ({children}) => {
   // Состояния
@@ -71,8 +71,6 @@ export const LogicBook = ({children}) => {
         type: REMOVE_BOOK,
         payload: id,
       });
-
-      alert.show('Книга была успешна удалена!', 'primary');
     },
     [alert]
   );

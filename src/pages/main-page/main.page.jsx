@@ -1,6 +1,6 @@
 import {Button} from '@/components';
 import {ListBooks} from '@/components/layouts';
-import './mainPage.scss';
+import './main-page.scss';
 
 export const MainPage = () => {
   return (
